@@ -79,24 +79,50 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="pt-BR" suppressHydrationWarning>
       <head>
-        <title>Cacau Show</title>
-        <meta name="description" content="Aproveite nossas promoções e produtos incríveis da Cacau Show!" />
+        <title>Pelúcia Menino Jesus que Respira | Acalma a Alma</title>
+        <meta name="description" content="Pelúcia Menino Jesus que Respira | Acalma a Alma" />
         <meta name="robots" content="index, follow" />
 
+        {/* ================================
+            Utmify Pixel (Google)
+        ================================= */}
+        <Script id="utmify-pixel" strategy="afterInteractive">
+          {`
+            window.googlePixelId = "68ffbcb05c70a2f71e7cc3ad";
+            var a = document.createElement("script");
+            a.setAttribute("async", "");
+            a.setAttribute("defer", "");
+            a.setAttribute(
+              "src",
+              "https://cdn.utmify.com.br/scripts/pixel/pixel-google.js"
+            );
+            document.head.appendChild(a);
+          `}
+        </Script>
+
+        {/* ================================
+            Utmify UTMs
+        ================================= */}
+        <Script
+          src="https://cdn.utmify.com.br/scripts/utms/latest.js"
+          data-utmify-prevent-xcod-sck
+          data-utmify-prevent-subids
+          strategy="afterInteractive"
+        />
+
+        {/* ================================
+            Meta Pixel
+        ================================= */}
         <Script id="meta-pixel" strategy="afterInteractive">
           {`
             !function(f,b,e,v,n,t,s)
             {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-            n.queue=[];t=b.createElement(e);t.async=!0;
-            t.src=v;s=b.getElementsByTagName(e)[0];
-            s.parentNode.insertBefore(t,s)}(window, document,'script',
-            'https://connect.facebook.net/en_US/fbevents.js');
+            n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
             fbq('init', '${META_PIXEL_ID}');
             fbq('track', 'PageView');
           `}
         </Script>
+
       </head>
 
       <body className={cn('font-sans', inter.variable)}>
