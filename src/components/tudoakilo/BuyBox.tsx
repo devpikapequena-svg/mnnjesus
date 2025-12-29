@@ -165,7 +165,7 @@ export default function BuyBox({
               <div className="text-left">
                 <div className="text-[13px] font-semibold text-black leading-tight">Frete Grátis</div>
                 <div className="mt-[2px] text-[12px] text-black/60 leading-snug">
-                  Em todos os pedidos acima de R$ 250
+                  Em todos os pedidos acima de R$ 90
                 </div>
               </div>
             </div>
