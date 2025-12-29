@@ -26,8 +26,8 @@ export default function CartModal() {
   const { isCartOpen, closeCart, items, inc, dec, remove, total } = cart
 
   // metas (as suas atuais)
-  const FREE_SHIPPING = 97
-  const GIFT_TARGET = 156.4
+  const FREE_SHIPPING = 49.90
+  const GIFT_TARGET = 82.8
 
   const isEmpty = items.length === 0
 

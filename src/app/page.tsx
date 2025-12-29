@@ -110,7 +110,7 @@ export default function Page() {
       rating: 4.9,
       ratingCount: 480,
       oldPrice: 399.9,
-      price: 97.9,
+      price: 49.9,
       cashbackLabel: '20% de Cashback!',
       stockLeft: 25,
       variants,

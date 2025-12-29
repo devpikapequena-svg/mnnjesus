@@ -154,7 +154,7 @@ export default function CheckoutPage() {
   const [step, setStep] = useState<Step>(1)
 
   // ✅ REGRA FRETE GRÁTIS
-  const FREE_SHIPPING = 10
+  const FREE_SHIPPING = 49.90
   const gotFreeShipping = total >= FREE_SHIPPING
 
   // ====== TIMER (topbar marrom)
@@ -173,7 +173,7 @@ export default function CheckoutPage() {
   }, [offerSeconds])
 
   // ====== PROGRESSO BRINDE
-  const GIFT_TARGET = 156.4
+  const GIFT_TARGET = 82.8
   const missingGift = Math.max(0, GIFT_TARGET - total)
   const giftPct = Math.min(100, (total / GIFT_TARGET) * 100)
 

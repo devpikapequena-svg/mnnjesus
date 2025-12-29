@@ -73,7 +73,7 @@ export default function BuyBox({
             <div className="text-[27px] text-[#6b4a32]">{currency(product.price)}</div>
             <div className="text-[17px] text-[#b08c6a] line-through">{currency(product.oldPrice)}</div>
             <span className="text-[12px] bg-[#b08c6a] text-white px-2 py-1 rounded-md leading-none">
-              -75%
+              -85%
             </span>
           </div>
         </div>

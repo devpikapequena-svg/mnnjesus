@@ -305,7 +305,7 @@ export default function PagamentoPage() {
     </div>
 
     <div className="mt-5 text-[12px] sm:text-[13px] font-semibold text-white/85">
-      meninojesus.online
+      tudoakilo
     </div>
   </div>
 </footer>
