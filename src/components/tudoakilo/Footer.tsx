@@ -9,7 +9,10 @@ function FooterCol({ title, items }: { title: string; items: string[] }) {
       <ul className="mt-4 space-y-2 text-[13px] text-white/90">
         {items.map((it) => (
           <li key={it}>
-            <a href="#" className="hover:text-white underline-offset-4 hover:underline">
+            <a
+              href="#"
+              className="hover:text-white underline-offset-4 hover:underline"
+            >
               {it}
             </a>
           </li>
@@ -27,8 +30,12 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
           {/* BRAND */}
           <div>
-            <div className="text-[16px] font-semibold tracking-wide">TUDOAKILO</div>
-            <p className="mt-3 text-[13px] text-white/90">Transformando Clientes em Fãs!</p>
+            <div className="text-[16px] font-semibold tracking-wide">
+              TUDOAKILO
+            </div>
+            <p className="mt-3 text-[13px] text-white/90">
+              Transformando Clientes em Fãs!
+            </p>
 
             <div className="mt-5 flex items-center gap-3">
               <a
@@ -74,7 +81,9 @@ export default function Footer() {
 
           {/* NEWSLETTER */}
           <div>
-            <div className="text-[14px] font-semibold tracking-wide">RECEBA NOSSAS PROMOÇÕES</div>
+            <div className="text-[14px] font-semibold tracking-wide">
+              RECEBA NOSSAS PROMOÇÕES
+            </div>
             <p className="mt-3 text-[13px] text-white/90">
               Seja o primeiro a saber sobre novas coleções e ofertas exclusivas.
             </p>
@@ -94,24 +103,23 @@ export default function Footer() {
               </div>
             </div>
 
-            {/* microcopy no mobile */}
             <p className="mt-2 text-[12px] text-white/80">
               Ao se cadastrar, você concorda com nossa política de privacidade.
             </p>
           </div>
         </div>
 
-        {/* BOTTOM */}
+        {/* BOTTOM INSTITUCIONAL */}
         <div className="mt-10 pt-6 border-t border-white/20">
-          <div className="flex flex-col sm:flex-row items-center justify-between gap-3 text-[12px] text-white/90">
-            <div>© 2025, tudoakilo. Todos direitos reservados.</div>
-            <div className="flex items-center gap-4">
-              <a href="#" className="hover:text-white underline-offset-4 hover:underline">
-                Termos
-              </a>
-              <a href="#" className="hover:text-white underline-offset-4 hover:underline">
-                Privacidade
-              </a>
+          <div className="flex flex-col items-center gap-2 text-center text-[12px] text-white/90">
+            <div>
+              © 2025, tudoakilo. Todos direitos reservados.
+            </div>
+
+            <div className="max-w-[1100px] text-white/80 leading-relaxed">
+              Tai Negócios Digitais LTDA · CNPJ: 55.177.241/0001-00 ·
+              Rua Mistral, 332 · Jardim Bom Clima ·
+              Edif. The Point Torre A Sala 209A · Cuiabá - MT
             </div>
           </div>
         </div>
