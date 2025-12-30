@@ -101,26 +101,27 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* BOTTOM INSTITUCIONAL (FULL WIDTH no desktop + respiro no mobile) */}
-      <div className="w-full border-t border-white/20">
-        <div
-          className="
-            mx-auto w-full max-w-[1500px]
-            px-4 sm:px-6
-            pt-6
-            pb-[calc(24px+env(safe-area-inset-bottom))]
-            sm:pb-6
-          "
-        >
-          <div className="flex flex-col items-center gap-2 text-center text-[12px] text-white/90">
-            <div>© 2025, tudoakilo. Todos direitos reservados.</div>
+  {/* BOTTOM INSTITUCIONAL (FULL WIDTH + MAIS RESPIRO NO MOBILE) */}
+<div className="w-full border-t border-white/20">
+  <div
+    className="
+      mx-auto w-full max-w-[1500px]
+      px-4 sm:px-6
+      pt-6
+      pb-[calc(56px+env(safe-area-inset-bottom))]  /* 👈 mais pra cima no mobile */
+      sm:pb-8                                   /* 👈 desktop/tablet ok */
+    "
+  >
+    <div className="flex flex-col items-center gap-2 text-center text-[12px] text-white/90">
+      <div>© 2025, tudoakilo. Todos direitos reservados.</div>
 
-            <div className="max-w-[1100px] text-white/80 leading-relaxed">
-              Tai Negócios Digitais LTDA · CNPJ: 55.177.241/0001-00 · Rua Mistral, 332 · Jardim
-              Bom Clima · Edif. The Point Torre A Sala 209A · Cuiabá - MT
-            </div>
-          </div>
-        </div>
+      <div className="max-w-[1100px] text-white/80 leading-relaxed">
+        Tai Negócios Digitais LTDA · CNPJ: 55.177.241/0001-00 · Rua Mistral, 332 · Jardim Bom
+        Clima · Edif. The Point Torre A Sala 209A · Cuiabá - MT
+      </div>
+    </div>
+  </div>
+</div>
       </div>
     </footer>
   )
