@@ -10,7 +10,7 @@ export default function TopBar() {
           <ChevronLeft className="w-4 h-4" />
         </button>
 
-        <span className="font-medium">Frete Grátis a partir de R$ 250</span>
+        <span className="font-medium">Frete Grátis a partir de R$ 90</span>
 
         <button className="absolute right-6 opacity-80 hover:opacity-100" aria-label="Próximo">
           <ChevronRight className="w-4 h-4" />
