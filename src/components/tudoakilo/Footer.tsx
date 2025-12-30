@@ -9,10 +9,7 @@ function FooterCol({ title, items }: { title: string; items: string[] }) {
       <ul className="mt-4 space-y-2 text-[13px] text-white/90">
         {items.map((it) => (
           <li key={it}>
-            <a
-              href="#"
-              className="hover:text-white underline-offset-4 hover:underline"
-            >
+            <a href="#" className="hover:text-white underline-offset-4 hover:underline">
               {it}
             </a>
           </li>
@@ -24,18 +21,14 @@ function FooterCol({ title, items }: { title: string; items: string[] }) {
 
 export default function Footer() {
   return (
-    <footer className="mt-10 bg-[#b1967d] text-white">
+    <footer className="mt-10 w-full bg-[#b1967d] text-white">
+      {/* CONTEÚDO (GRID) */}
       <div className="mx-auto w-full max-w-[1500px] px-4 sm:px-6 py-10 sm:py-12">
-        {/* GRID */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
           {/* BRAND */}
           <div>
-            <div className="text-[16px] font-semibold tracking-wide">
-              TUDOAKILO
-            </div>
-            <p className="mt-3 text-[13px] text-white/90">
-              Transformando Clientes em Fãs!
-            </p>
+            <div className="text-[16px] font-semibold tracking-wide">TUDOAKILO</div>
+            <p className="mt-3 text-[13px] text-white/90">Transformando Clientes em Fãs!</p>
 
             <div className="mt-5 flex items-center gap-3">
               <a
@@ -81,9 +74,7 @@ export default function Footer() {
 
           {/* NEWSLETTER */}
           <div>
-            <div className="text-[14px] font-semibold tracking-wide">
-              RECEBA NOSSAS PROMOÇÕES
-            </div>
+            <div className="text-[14px] font-semibold tracking-wide">RECEBA NOSSAS PROMOÇÕES</div>
             <p className="mt-3 text-[13px] text-white/90">
               Seja o primeiro a saber sobre novas coleções e ofertas exclusivas.
             </p>
@@ -108,18 +99,25 @@ export default function Footer() {
             </p>
           </div>
         </div>
+      </div>
 
-        {/* BOTTOM INSTITUCIONAL */}
-        <div className="mt-10 pt-6 border-t border-white/20">
+      {/* BOTTOM INSTITUCIONAL (FULL WIDTH no desktop + respiro no mobile) */}
+      <div className="w-full border-t border-white/20">
+        <div
+          className="
+            mx-auto w-full max-w-[1500px]
+            px-4 sm:px-6
+            pt-6
+            pb-[calc(24px+env(safe-area-inset-bottom))]
+            sm:pb-6
+          "
+        >
           <div className="flex flex-col items-center gap-2 text-center text-[12px] text-white/90">
-            <div>
-              © 2025, tudoakilo. Todos direitos reservados.
-            </div>
+            <div>© 2025, tudoakilo. Todos direitos reservados.</div>
 
             <div className="max-w-[1100px] text-white/80 leading-relaxed">
-              Tai Negócios Digitais LTDA · CNPJ: 55.177.241/0001-00 ·
-              Rua Mistral, 332 · Jardim Bom Clima ·
-              Edif. The Point Torre A Sala 209A · Cuiabá - MT
+              Tai Negócios Digitais LTDA · CNPJ: 55.177.241/0001-00 · Rua Mistral, 332 · Jardim
+              Bom Clima · Edif. The Point Torre A Sala 209A · Cuiabá - MT
             </div>
           </div>
         </div>
