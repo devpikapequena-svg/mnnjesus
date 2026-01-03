@@ -11,8 +11,8 @@ import { PaymentProvider } from '@/context/PaymentContext'
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-sans' })
 
-const META_PIXEL_ID = '868874045516079'
-const TIKTOK_PIXEL_ID = 'D59ICU3C77U7482963B0'
+const META_PIXEL_ID = '1248414514007813'  // Updated Meta Pixel ID
+const UTMIFY_PIXEL_ID = '69589cd46ff07ca8358dc19b' // Updated Utmify Pixel ID
 
 function LayoutContent({ children }: { children: React.ReactNode }) {
   const pathname = usePathname()
@@ -49,12 +49,12 @@ function LayoutContent({ children }: { children: React.ReactNode }) {
     if (typeof window !== 'undefined') {
       // Meta PageView SPA
       if (typeof (window as any).fbq === 'function') {
-        ;(window as any).fbq('track', 'PageView')
+        (window as any).fbq('track', 'PageView')
       }
 
       // TikTok PageView SPA
       if (typeof (window as any).ttq === 'function') {
-        ;(window as any).ttq.page()
+        (window as any).ttq.page()
       }
     }
   }, [pathname, searchParams, isNotFoundPage])
@@ -97,7 +97,7 @@ export default function RootLayout({
         ================================= */}
         <Script id="utmify-pixel" strategy="afterInteractive">
           {`
-            window.googlePixelId = "68ffbcb05c70a2f71e7cc3ad";
+            window.googlePixelId = "${UTMIFY_PIXEL_ID}";
             var a = document.createElement("script");
             a.setAttribute("async", "");
             a.setAttribute("defer", "");
@@ -108,16 +108,6 @@ export default function RootLayout({
             document.head.appendChild(a);
           `}
         </Script>
-
-        {/* ================================
-            Utmify UTMs
-        ================================= */}
-        <Script
-          src="https://cdn.utmify.com.br/scripts/utms/latest.js"
-          data-utmify-prevent-xcod-sck
-          data-utmify-prevent-subids
-          strategy="afterInteractive"
-        />
 
         {/* ================================
             Meta Pixel
